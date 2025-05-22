@@ -1,0 +1,1781 @@
+{
+	"info": {
+		"_postman_id": "26221a6a-95c1-49d5-8b75-cc8fc6c15e38",
+		"name": "Blog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37976283"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Alice\",\r\n    \"email\": \"Alice@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"gender\": \"female\",\r\n    \"country\": \"India\",\r\n    \"role\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Alice\",\r\n    \"email\": \"Alice@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"gender\": \"female\",\r\n    \"country\": \"India\",\r\n    \"role\": \"admin\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-nMoFx54+czTntmSLXl3mqIsZV4A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:27:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Alice@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Alice@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-MeUPPaE3r687cjouSOcCSQXEOo0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:28:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login succesfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"682f0a298f2f65f62d31bf74\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/get-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"get-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get-user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"_id\": \"682f0a298f2f65f62d31bf74\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/get-user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"get-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-W0e1/jFzm2ACzjwJTW/akK3X4U0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:37:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"682f0a298f2f65f62d31bf74\",\n        \"name\": \"Alice\",\n        \"email\": \"Alice@gmail.com\",\n        \"gender\": \"female\",\n        \"country\": \"India\",\n        \"role\": \"admin\",\n        \"emailVerified\": true,\n        \"createdAt\": \"2025-05-22T11:27:37.774Z\",\n        \"updatedAt\": \"2025-05-22T11:35:58.252Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "send-verification-code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\"\r\n  \r\n  \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/send-verification-code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"send-verification-code"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "send-verification-code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\"\r\n  \r\n  \r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/send-verification-code",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"send-verification-code"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-W+LN0/0UIbSFbKfUirI+JCJMKTE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:32:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Verification code sent to your email\"\n}"
+						}
+					]
+				},
+				{
+					"name": "verify-email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\",\r\n  \"code\":\"961307\"\r\n  \r\n  \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/verify-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"verify-email"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verify-email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\",\r\n  \"code\":\"961307\"\r\n  \r\n  \r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/verify-email",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"verify-email"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-FwmB7f+DMIStv83qlAh+ZHaWnfU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:32:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email verified successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "forgot-password-code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n   \"email\": \"Alice@gmail.com\"\r\n  \r\n  \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "forgot-password-code",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n   \"email\": \"Alice@gmail.com\"\r\n  \r\n  \r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/forgot-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-CpEJzDedief7P1WicIpqSCsgjhg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:33:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password reset email sent. Check your inbox.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "recover-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\",\r\n  \"code\":\"377080\",\r\n  \"newPassword\":\"Alice@1234\"\r\n  \r\n  \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/recover-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"recover-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "recover-password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"email\": \"Alice@gmail.com\",\r\n  \"code\":\"377080\",\r\n  \"newPassword\":\"Alice@1234\"\r\n  \r\n  \r\n}\r\n"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/recover-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"recover-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-JLWAnLrf6qmJkXqaEuCQpWt9O0c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:34:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Password reset successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentPassword\": \"Alice@1234\",\r\n  \"newPassword\": \"Alice12\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"First post\",\r\n  \"content\": \"This is my First post\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"First post\",\r\n  \"content\": \"This is my First post\"\r\n  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d6-Ejw+ECDDBDGEC381BC/HGH7Ip7g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:38:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"First post\",\n    \"content\": \"This is my First post\",\n    \"author_id\": \"682f0a298f2f65f62d31bf74\",\n    \"_id\": \"682f0c9d8f2f65f62d31bf87\",\n    \"createdAt\": \"2025-05-22T11:38:05.941Z\",\n    \"updatedAt\": \"2025-05-22T11:38:05.941Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-b47RwrCxRb1azD/cwRpzwSADfeo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:38:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"682f0c9d8f2f65f62d31bf87\",\n        \"title\": \"First post\",\n        \"content\": \"This is my First post\",\n        \"author_id\": \"682f0a298f2f65f62d31bf74\",\n        \"createdAt\": \"2025-05-22T11:38:05.941Z\",\n        \"updatedAt\": \"2025-05-22T11:38:05.941Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"682f0c9d8f2f65f62d31bf87"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"682f0c9d8f2f65f62d31bf87"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d6-UF6t1Xlc52PXWKzuruxBXB+8KtE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:39:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"682f0c9d8f2f65f62d31bf87\",\n    \"title\": \"First post\",\n    \"content\": \"This is my First post\",\n    \"author_id\": \"682f0a298f2f65f62d31bf74\",\n    \"createdAt\": \"2025-05-22T11:38:05.941Z\",\n    \"updatedAt\": \"2025-05-22T11:38:05.941Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"My new Blog Post\",\r\n  \"content\": \"This is my new blog post\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"682f0c9d8f2f65f62d31bf87"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update post",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"My new Blog Post\",\r\n  \"content\": \"This is my new blog post\"\r\n  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"682f0c9d8f2f65f62d31bf87"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-zLa8nIXjSBrZ8ACA/I736YGA2Ig\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:41:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"682f0c9d8f2f65f62d31bf87\",\n    \"title\": \"My new Blog Post\",\n    \"content\": \"This is my new blog post\",\n    \"author_id\": \"682f0a298f2f65f62d31bf74\",\n    \"createdAt\": \"2025-05-22T11:38:05.941Z\",\n    \"updatedAt\": \"2025-05-22T11:41:22.423Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"682f0c9d8f2f65f62d31bf87"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/682f0c9d8f2f65f62d31bf87",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"682f0c9d8f2f65f62d31bf87"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-XrW4VbXHKSS/geYbFMGFJouGuCc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:45:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "create comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"682f0c9d8f2f65f62d31bf87\",\r\n    \"content\": \"Wonderful post\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postId\": \"682f0c9d8f2f65f62d31bf87\",\r\n    \"content\": \"Wonderful post\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-4geLFMchodF5+u25qgydl11qcLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:42:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messasge\": \"Comment added successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all comments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-Np0kY/PINM7EhbfrR9CnZlBR/5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:42:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"682dd23f36c080b85631cb17\",\n        \"postId\": \"682dce749e401f7fdd18d297\",\n        \"content\": \"Great post\",\n        \"author_id\": \"682dceb79e401f7fdd18d29a\",\n        \"created_at\": \"2025-05-21T13:16:47.646Z\",\n        \"updatedAt\": \"2025-05-21T13:16:47.646Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"682f0daa8f2f65f62d31bf91\",\n        \"postId\": \"682f0c9d8f2f65f62d31bf87\",\n        \"content\": \"Wonderful post\",\n        \"author_id\": \"682f0a298f2f65f62d31bf74\",\n        \"created_at\": \"2025-05-22T11:42:34.720Z\",\n        \"updatedAt\": \"2025-05-22T11:42:34.720Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get single comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"comments",
+								"682f0daa8f2f65f62d31bf91"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get single comment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"682f0daa8f2f65f62d31bf91"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"df-QHVcfMGLXwVZuBsFn/Ja7qeFsXE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:43:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"682f0daa8f2f65f62d31bf91\",\n    \"postId\": \"682f0c9d8f2f65f62d31bf87\",\n    \"content\": \"Wonderful post\",\n    \"author_id\": \"682f0a298f2f65f62d31bf74\",\n    \"created_at\": \"2025-05-22T11:42:34.720Z\",\n    \"updatedAt\": \"2025-05-22T11:42:34.720Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"content\": \"Wonderful\"\r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"comments",
+								"682f0daa8f2f65f62d31bf91"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update comment",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"content\": \"Wonderful\"\r\n  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"682f0daa8f2f65f62d31bf91"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-Wbfdsu4vnljk7IbAGJ2CkqEVDYg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:43:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment updated\",\n    \"comment\": {\n        \"_id\": \"682f0daa8f2f65f62d31bf91\",\n        \"postId\": \"682f0c9d8f2f65f62d31bf87\",\n        \"content\": \"Wonderful\",\n        \"author_id\": \"682f0a298f2f65f62d31bf74\",\n        \"created_at\": \"2025-05-22T11:42:34.720Z\",\n        \"updatedAt\": \"2025-05-22T11:43:46.183Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJmMGEyOThmMmY2NWY2MmQzMWJmNzQiLCJuYW1lIjoiQWxpY2UiLCJlbWFpbCI6IkFsaWNlQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NzkxMzMzMywiZXhwIjoxNzQ4NTE4MTMzfQ.f7WZqMlw4MNoqp98eFsuo9wNfq__J7lIfDJafI0S_nk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"comments",
+								"682f0daa8f2f65f62d31bf91"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete comment",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/comments/682f0daa8f2f65f62d31bf91",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"682f0daa8f2f65f62d31bf91"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-+7dttf6TMeUXpmYyRtIWXCeHyZw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 May 2025 11:44:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment deleted\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
