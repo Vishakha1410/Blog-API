@@ -39,7 +39,6 @@ node server.js
 
 > The server runs on `http://localhost:5000`
 
-> A `.env` file is already included with required variables (`MONGO_URI`, `JWT_SECRET`, etc.)
 
 ---
 
